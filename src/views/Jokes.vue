@@ -10,6 +10,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    jokes() {
+      return this.$store.getters.getAllJokes
+    },
+  },
+}
+</script>
+
 <style scoped>
 h4 {
   color: blueviolet;

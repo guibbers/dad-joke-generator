@@ -25,6 +25,19 @@
 export default {
   name: 'Home',
   components: {},
+  methods: {
+    addJoke() {
+      this.$store.dispatch('setCurrentJoke')
+    },
+  },
+  computed: {
+    joke() {
+      return this.$store.getters.getCurrentJoke
+    },
+  },
+  // mounted() {
+  //   this.joke = this.$store.getters.getCurrentJoke
+  // },
 }
 </script>
 
